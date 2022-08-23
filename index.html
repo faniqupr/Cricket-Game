@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Cricket Game</title>
+  </head>
+  <body>
+    <section class="rules">
+      <h3>Rules</h3>
+      <ul>
+        <li>You are allowed to enter a number from 1 to 6 only</li>
+        <li>
+          When your input and computer's input match, the batsman loses the
+          wicket
+        </li>
+        <li>
+          If the numbers dont match then the batsman's input gets added to their
+          total score
+        </li>
+        <li>
+          When batsman loses their wicket, the bowler becomes the batsman and
+          chases the target set by the former batsman
+        </li>
+        <li>
+          You win the match by reaching the target or preventing the computer
+          from reaching the target
+        </li>
+      </ul>
+      <button class="btn proceed-to-toss">Proceed to toss</button>
+    </section>
+    <section class="toss hidden">
+      <h3>Toss</h3>
+      <section class="pre-toss">
+        <p class="choose-toss-option-message">
+          Choose your option to flip the coin
+        </p>
+        <section class="toss-buttons">
+          <button class="btn heads">Heads</button>
+          <button class="btn tails">Tails</button>
+        </section>
+      </section>
+      <section class="toss-messsage">
+        <section class="toss-win hidden">
+          <section class="toss-win-message">
+            <p>You won the toss</p>
+            <p>What do you want?</p>
+          </section>
+          <section class="toss-win-buttons">
+            <button class="btn bat">Batting</button>
+            <button class="btn bowl">Bowling</button>
+          </section>
+        </section>
+        <section class="toss-loss hidden">
+          <p>You loss the toss</p>
+          <p>You are <span class="batting-or-bowling"></span></p>
+          <button class="btn start-game">Start Game</button>
+        </section>
+      </section>
+    </section>
+    <section class="game hidden">
+      <header>
+        <h1>Cricket Game 🏏⚾</h1>
+        <h2>You Are <span class="status"></span></h2>
+        <button class="btn restart">Restart</button>
+      </header>
+      <main>
+        <section class="user">
+          <p class="user-target hidden">
+            🎯Target: <span class="user-target-score"></span>
+          </p>
+          <input type="number" class="user-input" />
+          <button class="btn enter">Enter</button>
+          <p class="user-current hidden">
+            Current Score: <span class="user-current-score"></span>
+          </p>
+        </section>
+        <section class="comp">
+          <p class="comp-target hidden">
+            🎯Target: <span class="comp-target-score"></span>
+          </p>
+          <p class="comp-input">?</p>
+          <p class="comp-current hidden">
+            Current Score: <span class="comp-current-score"></span>
+          </p>
+        </section>
+        <p class="message"></p>
+      </main>
+    </section>
+    <script src="script.js"></script>
+  </body>
+</html>
